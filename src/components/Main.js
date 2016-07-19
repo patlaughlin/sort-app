@@ -28,9 +28,8 @@ class AppComponent extends React.Component {
 
     for (i = 0; i < len; i++) {
       for (j = 0, stop = len - i; j < stop; j++) {
-        if ((Math.abs(j % 2) === 1) && (items[j] < items[j + 1])) {
-          this.swap(items, j, j + 1);
-        } else if ((j % 2 === 0) && (items[j] > items[j + 1])) {
+        if ((Math.abs(j % 2) === 1) && (items[j] < items[j + 1]) ||
+          (j % 2 === 0) && (items[j] > items[j + 1])) {
           this.swap(items, j, j + 1);
         }
       }
@@ -43,6 +42,10 @@ class AppComponent extends React.Component {
     const el     = this;
     let inputVal = e.target.value;
     inputVal     = inputVal.trim().split(',');
+    inputVal     = inputVal.map(el => {
+      if (el === '') return;
+      return parseInt(el, 10);
+    });
     this.setState({
       result: el.sort(inputVal)
     });
