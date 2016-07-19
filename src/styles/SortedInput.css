@@ -1,0 +1,8 @@
+.sortedinput-component input {
+  display: block;
+  margin: 35px auto;
+  width: 20%;
+  padding: 15px;
+  font-size: 24px;
+  border: 3px solid #5b58ff;
+}

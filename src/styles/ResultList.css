@@ -1,0 +1,23 @@
+.resultlist-component {
+  width: 45%;
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.resultlist-component li:first-child {
+  border-top: 1px solid black;
+}
+
+.resultlist-component li {
+  width:100%;
+  font-size: 16px;
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  background: #ebecba;
+}
